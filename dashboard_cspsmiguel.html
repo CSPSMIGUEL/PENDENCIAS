@@ -180,7 +180,7 @@ tbody tr.fora td:first-child{box-shadow:inset 3px 0 0 var(--red);}
     <div class="title-block">
       <h1>Pendencias Ativas</h1>
       <span class="site">CSP SAO MIGUEL</span>
-      <span class="upd" id="updStamp">Ultima atualizacao: 05/07/2026 15:02 &middot; 457 registros</span>
+      <span class="upd" id="updStamp">Ultima atualizacao: 05/07/2026 15:09 &middot; 457 registros</span>
     </div>
     <div class="stat-strip" id="statStrip"></div>
     <button class="theme-btn" id="themeToggle">&#9789; Modo Claro</button>
@@ -303,7 +303,7 @@ function buildBtnSet(containerId, values, key, allLabel){
     });
   });
 }
-buildBtnSet('f-tipo', [...new Set(DATA.map(r=>r.tipo))].filter(v=>v && v!=='-').sort(), 'tipo', 'TODOS');
+buildBtnSet('f-tipo', [...new Set(DATA.map(r=>r.tipo))].filter(v=>v && v!=='-' && v!=='BM').sort(), 'tipo', 'TODOS');
 buildBtnSet('f-gar', ['LP','OW'], 'gar', 'TODOS');
 buildBtnSet('f-cat', ['HHP','DTV','NPC','WSM','REF','ACN'], 'cat', 'TODAS');
 buildBtnSet('f-linha', ['MX','L.MARROM','L.BRANCA'], 'linha', 'TODAS');
